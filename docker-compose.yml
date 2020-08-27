@@ -1,0 +1,58 @@
+version: '3.5'
+
+services:
+  spigot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: spigot-container
+    volumes:
+      - ./spigot-data/:/data/
+    networks:
+      - spigot-net
+    ports:
+      - "25565:25565"
+    tty: true
+    stdin_open: true
+    
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:5.0.2
+    container_name: phpmyadmin-container
+    environment:
+      - TZ=Asia/Tokyo
+      - PMA_ARBITRARY=1
+      - PMA_HOST=mysql
+      - PMA_PORT=3306
+      - PMA_USER=root
+      - PMA_PASSWORD=lucky3028
+    networks:
+      - spigot-net
+    ports:
+      - "8000:80"
+    depends_on:
+      - mysql
+
+  mysql:
+    image: mariadb:10.4.14-focal
+    container_name: mysql-container
+    environment:
+      - TZ=Asia/Tokyo
+      - MYSQL_ROOT_PASSWORD=lucky3028
+    command: [
+      '--wait_timeout=86400',
+      '--character-set-server=utf8',
+    ]
+    networks:
+      - spigot-net
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./db-data/:/var/lib/mysql/
+    
+networks:
+  default:
+    external:
+      name: bridge
+  spigot-net:
+    name: spigot-net
+    external: false
