@@ -7,3 +7,10 @@ Dockerでspigotサーバーを立ち上げるためのDockerファイル群。my
 ## License
 
 MIT License
+
+## Special Thanks
+
+参考にさせていただいたサイト。
+
+* gorohash - Dockerイメージを軽量化する
+  * https://qiita.com/gorohash/items/2358b4b9e0c708e510d0
