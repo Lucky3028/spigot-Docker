@@ -14,3 +14,5 @@ MIT License
 
 * gorohash - Dockerイメージを軽量化する
   * https://qiita.com/gorohash/items/2358b4b9e0c708e510d0
+* GiganticMinecraft - SeichiAssist
+  * https://github.com/GiganticMinecraft/SeichiAssist
