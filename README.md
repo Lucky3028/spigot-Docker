@@ -1,6 +1,6 @@
 # spigot-Docker
 
-This repository will help you to configure Minecraft Spigot server on Docker.
+This repository will help you to configure Minecraft JE Spigot server on Docker.
 
 ## Description
 
