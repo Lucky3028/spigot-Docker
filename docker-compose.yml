@@ -4,7 +4,7 @@ services:
   spigot:
     build:
       context: .
-      dockerfile: Dockerfile_Spigot
+      dockerfile: ./Docker/Spigot/Dockerfile
     container_name: spigot-container
     volumes:
       - ./spigot-data/:/data/
