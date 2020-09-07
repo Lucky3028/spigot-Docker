@@ -4,14 +4,15 @@ This repository will help you to configure and run Minecraft JE Spigot server on
 
 ## Description
 
-Dockerでspigotサーバーを立ち上げるためのDockerファイル群。mysql及びphpmyadminも同時に立ち上げるようになっているので、不要ならば適宜docker-compose.ymlを編集してご使用ください。
+Dockerでspigotサーバーを立ち上げるためのDockerファイル群。mysql及びphpmyadminも同時に立ち上げるようになっているので、不要ならば適宜docker-compose.ymlを編集してご利用ください。
 
-また、Windowsバッチファイルも一緒に入っています。ServerHandlerの中のConfig.ps1を編集した上でご利用ください。
+また、Windowsバッチファイルも一緒に入っています。ServerHandlerフォルダのConfig.ps1を編集した上でご利用ください。
 
 ## Requirement
 
 * Docker
 * Windows PowerShell 5.1
+    * Maybe PowerShell 7.0
 
 ## License
 
