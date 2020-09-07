@@ -1,0 +1,1 @@
+﻿docker attach spigot-container
